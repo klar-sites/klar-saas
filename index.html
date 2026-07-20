@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mosaic — Understand your mind, one entry at a time</title>
+  <meta name="description" content="Mosaic is an AI-powered journaling app that turns your scattered daily thoughts into clear patterns, helping you grow and reflect.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#" class="nav-brand">
+          <span class="nav-brand-logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/>
+              <rect x="14" y="14" width="7" height="7" rx="1"/>
+            </svg>
+          </span>
+          Mosaic
+        </a>
+        
+        <ul class="nav-links">
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#how-it-works" class="nav-link">How it works</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+        
+        <div class="nav-actions">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark and light theme">
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+          <a href="#cta" class="btn btn-primary" style="display: none;">Get the app</a>
+          <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="nav-mobile" id="nav-mobile" role="dialog" aria-modal="true" aria-label="Mobile menu">
+    <button class="nav-mobile-close" id="nav-close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <a href="#features" class="nav-mobile-link">Features</a>
+    <a href="#how-it-works" class="nav-mobile-link">How it works</a>
+    <a href="#reviews" class="nav-mobile-link">Reviews</a>
+    <a href="#faq" class="nav-mobile-link">FAQ</a>
+    <a href="#cta" class="btn btn-primary btn-lg">Get the app</a>
+  </div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content reveal">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            New: AI-powered weekly insights
+          </div>
+          <h1 class="hero-title">Understand your mind, one entry at a time.</h1>
+          <p class="hero-subtitle">
+            Mosaic uses private AI to turn your scattered daily thoughts into clear patterns, helping you grow and reflect without the manual effort.
+          </p>
+          <div class="hero-cta">
+            <a href="#" class="btn-store">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.96 2.42-4.39 2.53-4.46-1.38-2.02-3.53-2.3-4.29-2.33-1.83-.19-3.57 1.07-4.5 1.07-.94 0-2.36-1.05-3.89-1.02-2 .03-3.87 1.17-4.91 2.96-2.09 3.62-.53 8.98 1.5 11.92 1.01 1.45 2.21 3.07 3.78 3.01 1.52-.06 2.09-.98 3.92-.98 1.82 0 2.35.98 3.95.95 1.64-.03 2.67-1.47 3.67-2.93 1.16-1.69 1.63-3.34 1.65-3.43-.04-.02-3.17-1.22-3.21-4.81zM14.52 3.34c.83-1.02 1.39-2.44 1.24-3.84-1.2.05-2.64.79-3.49 1.81-.77.91-1.44 2.37-1.26 3.74 1.34.1 2.69-.68 3.51-1.71z"/></svg>
+              <span class="btn-store-text">
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </span>
+            </a>
+            <a href="#" class="btn-store">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5V3.5c0-.3.1-.6.3-.8l10.2 9.3L3.3 21.3c-.2-.2-.3-.5-.3-.8zm10.8-8.1l2.9-2.6-2.9-1.7L13 7l3.7 2.1c.5.3.5 1 0 1.3L13 12.5l-.2-.1zM4 1.8l10.2 9.3L4 20.5V1.8z"/></svg>
+              <span class="btn-store-text">
+                <small>Get it on</small>
+                <strong>Google Play</strong>
+              </span>
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-value">50k+</span>
+              <span class="hero-stat-label">Active users</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">4.9</span>
+              <span class="hero-stat-label">App Store rating</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">100%</span>
+              <span class="hero-stat-label">Private & encrypted</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-visual reveal" data-delay="1">
+          <div class="phone-mockup">
+            <div class="phone-screen">
+              <div class="phone-statusbar">
+                <span>9:41</span>
+                <div class="phone-statusbar-icons">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 22h20V2L2 22z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 22h20V2L2 22z"/></svg>
+                </div>
+              </div>
+              <div class="phone-app">
+                <div class="phone-app-header">
+                  <div>
+                    <span class="phone-date">TUESDAY, OCT 24</span>
+                    <h4>Good morning, Alex</h4>
+                  </div>
+                  <div class="phone-avatar"></div>
+                </div>
+                
+                <div class="phone-mood-row">
+                  <div class="phone-mood-pill">
+                    <span class="phone-mood-dot" style="background: #4ade80"></span>
+                  </div>
+                  <div class="phone-mood-pill phone-mood-pill--active">
+                    <span class="phone-mood-dot" style="background: #fbbf24"></span>
+                    Focus
+                  </div>
+                  <div class="phone-mood-pill">
+                    <span class="phone-mood-dot" style="background: #60a5fa"></span>
+                  </div>
+                </div>
+                
+                <div class="phone-entry-card">
+                  <div class="phone-entry-header">
+                    <span class="phone-entry-time">8:32 AM</span>
+                  </div>
+                  <p class="phone-entry-text">Felt really clear-headed during the morning walk. Thinking about restructuring the project timeline...</p>
+                </div>
+                
+                <div class="phone-insight-card">
+                  <div class="phone-insight-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="phone-insight-label">AI Insight</div>
+                    <p class="phone-insight-text">You're 30% more focused on days you walk in the morning.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="phone-tabbar">
+                <div class="phone-tab phone-tab--active">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  Journal
+                </div>
+                <div class="phone-tab">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                  Insights
+                </div>
+                <div class="phone-tab">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Habits
+                </div>
+                <div class="phone-tab">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  You
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+      <div class="container">
+        <p class="social-proof-label">As featured in</p>
+        <div class="social-proof-logos">
+          <span class="social-proof-logo">The Verge</span>
+          <span class="social-proof-logo">TechCrunch</span>
+          <span class="social-proof-logo">Wired</span>
+          <span class="social-proof-logo">Product Hunt</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Features</span>
+          <h2 class="section-title">More than just a blank page.</h2>
+          <p class="section-subtitle">Mosaic blends the freedom of traditional journaling with the power of private AI to help you connect the dots.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card reveal" data-delay="1">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0110 0v4"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">End-to-end Encryption</h3>
+            <p class="feature-desc">Your thoughts are yours alone. We use industry-leading encryption so not even our servers can read your entries.</p>
+          </article>
+          <article class="feature-card reveal" data-delay="2">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">AI Pattern Recognition</h3>
+            <p class="feature-desc">Discover hidden trends in your mood and productivity. Our AI gently points out correlations you might miss.</p>
+          </article>
+          <article class="feature-card reveal" data-delay="3">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Smart Prompts</h3>
+            <p class="feature-desc">Staring at a blank page? Mosaic suggests context-aware prompts based on your previous entries and current time of day.</p>
+          </article>
+          <article class="feature-card reveal" data-delay="1">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/>
+                <path d="M19 10v2a7 7 0 01-14 0v-2"/>
+                <line x1="12" y1="19" x2="12" y2="23"/>
+                <line x1="8" y1="23" x2="16" y2="23"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Audio Journaling</h3>
+            <p class="feature-desc">Prefer to speak? Record your thoughts with high-fidelity audio that transcribes automatically and analyzes sentiment.</p>
+          </article>
+          <article class="feature-card reveal" data-delay="2">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Mood Tracking</h3>
+            <p class="feature-desc">Tag your entries with custom moods and see beautiful, interactive charts of your emotional journey over time.</p>
+          </article>
+          <article class="feature-card reveal" data-delay="3">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Cross-Device Sync</h3>
+            <p class="feature-desc">Start an entry on your phone during the commute and finish it on your tablet at home. Everything syncs seamlessly.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="section" id="how-it-works" style="background-color: var(--color-bg-alt);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">How it works</span>
+          <h2 class="section-title">Three steps to a clearer mind.</h2>
+          <p class="section-subtitle">No setup required. Just download, write, and let Mosaic do the heavy lifting.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal" data-delay="1">
+            <div class="step-number">1</div>
+            <h3 class="step-title">Write freely</h3>
+            <p class="step-desc">Type or speak your thoughts. No pressure to be polished—Mosaic accepts your raw, unfiltered mind.</p>
+          </div>
+          <div class="step reveal" data-delay="2">
+            <div class="step-number">2</div>
+            <h3 class="step-title">AI analyzes</h3>
+            <p class="step-desc">Our private models identify themes, sentiments, and connections across your past entries.</p>
+          </div>
+          <div class="step reveal" data-delay="3">
+            <div class="step-number">3</div>
+            <h3 class="step-title">Reflect & grow</h3>
+            <p class="step-desc">Receive weekly summaries and actionable insights that help you build better habits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Reviews</span>
+          <h2 class="section-title">Loved by over 50,000 thinkers.</h2>
+          <p class="section-subtitle">Join a community of people using Mosaic to understand themselves better.</p>
+        </div>
+        <div class="testimonials-grid">
+          <article class="testimonial-card reveal" data-delay="1">
+            <div class="testimonial-stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-text">"Finally a journal that talks back. The AI insights are scary good—it noticed I was anxious on days I skipped breakfast."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1600&q=80" alt="Portrait of Sarah K." class="testimonial-avatar">
+              <div class="testimonial-author-info">
+                <span class="testimonial-author-name">Sarah K.</span>
+                <span class="testimonial-author-role">Product Designer</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card reveal" data-delay="2">
+            <div class="testimonial-stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-text">"I've tried every journaling app. Mosaic is the first one that actually makes me want to write. The prompts are incredibly thoughtful."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1600&q=80" alt="Portrait of Mark T." class="testimonial-avatar">
+              <div class="testimonial-author-info">
+                <span class="testimonial-author-name">Mark T.</span>
+                <span class="testimonial-author-role">Software Engineer</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card reveal" data-delay="3">
+            <div class="testimonial-stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-text">"The privacy features sold me. End-to-end encryption means I can actually be honest in my entries without worrying about data leaks."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=1600&q=80" alt="Portrait of Elena R." class="testimonial-avatar">
+              <div class="testimonial-author-info">
+                <span class="testimonial-author-name">Elena R.</span>
+                <span class="testimonial-author-role">Writer & Researcher</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq" style="background-color: var(--color-bg-alt);">
+      <div class="container container--narrow">
+        <div class="section-header reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="section-title">Frequently asked questions.</h2>
+        </div>
+        <div class="faq-list reveal" data-delay="1">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Is my journal really secure?
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. We use AES-256 end-to-end encryption. Your entries are encrypted on your device before they ever reach our servers, meaning even our team cannot read your personal thoughts.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How does the AI insight generation work?
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Our on-device language models analyze word choice, frequency, and sentiment in your entries. They look for patterns over time and highlight them to you in your weekly summary. No data is sent to the cloud for analysis.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Can I export my data if I stop using it?
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Absolutely. We believe in data portability. You can export your entire journal history as plain text or PDF at any time from the settings menu, no questions asked.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Is there a free trial?
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes, Mosaic offers a 14-day free trial of all premium features. No credit card required to start. After the trial, you can continue on a limited free plan or upgrade to Pro.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section" id="cta">
+      <div class="container">
+        <div class="cta-card reveal">
+          <h2 class="cta-title">Start your reflection journey today.</h2>
+          <p class="cta-subtitle">Download Mosaic and get your first AI-generated weekly insight completely free.</p>
+          <div class="cta-buttons">
+            <a href="#" class="btn-store">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.96 2.42-4.39 2.53-4.46-1.38-2.02-3.53-2.3-4.29-2.33-1.83-.19-3.57 1.07-4.5 1.07-.94 0-2.36-1.05-3.89-1.02-2 .03-3.87 1.17-4.91 2.96-2.09 3.62-.53 8.98 1.5 11.92 1.01 1.45 2.21 3.07 3.78 3.01 1.52-.06 2.09-.98 3.92-.98 1.82 0 2.35.98 3.95.95 1.64-.03 2.67-1.47 3.67-2.93 1.16-1.69 1.63-3.34 1.65-3.43-.04-.02-3.17-1.22-3.21-4.81zM14.52 3.34c.83-1.02 1.39-2.44 1.24-3.84-1.2.05-2.64.79-3.49 1.81-.77.91-1.44 2.37-1.26 3.74 1.34.1 2.69-.68 3.51-1.71z"/></svg>
+              <span class="btn-store-text">
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </span>
+            </a>
+            <a href="#" class="btn-store">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5V3.5c0-.3.1-.6.3-.8l10.2 9.3L3.3 21.3c-.2-.2-.3-.5-.3-.8zm10.8-8.1l2.9-2.6-2.9-1.7L13 7l3.7 2.1c.5.3.5 1 0 1.3L13 12.5l-.2-.1zM4 1.8l10.2 9.3L4 20.5V1.8z"/></svg>
+              <span class="btn-store-text">
+                <small>Get it on</small>
+                <strong>Google Play</strong>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-brand">
+            <span class="nav-brand-logo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7" rx="1"/>
+                <rect x="14" y="3" width="7" height="7" rx="1"/>
+                <rect x="3" y="14" width="7" height="7" rx="1"/>
+                <rect x="14" y="14" width="7" height="7" rx="1"/>
+              </svg>
+            </span>
+            Mosaic
+          </a>
+          <p>The AI-powered journal that helps you understand your mind and build better habits.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#cta">Download</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mosaic Labs, Inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
