@@ -1,0 +1,10 @@
+{
+  "pageTypes": [],
+  "pages": [
+    {
+      "name": "index.html",
+      "editableElements": ".hero-badge :field(name:heroBadge, type:string),\n.hero-title :field(name:heroTitle, type:string),\n.hero-subtitle :field(name:heroSubtitle, type:text),\n.hero-cta :field(name:heroCtaButtons, type:array, options(layout:list)),\n.hero-stats :field(name:heroStats, type:array, options(layout:list)),\n.social-proof-label :field(name:socialProofLabel, type:string),\n.social-proof-logos :field(name:socialProofLogos, type:array, options(layout:list)),\n#features .section-header .eyebrow :field(name:featuresEyebrow, type:string),\n#features .section-header .section-title :field(name:featuresTitle, type:string),\n#features .section-header .section-subtitle :field(name:featuresSubtitle, type:text),\n.features-grid :field(name:features, type:array, options(layout:list)),\n#how-it-works .section-header .eyebrow :field(name:howItWorksEyebrow, type:string),\n#how-it-works .section-header .section-title :field(name:howItWorksTitle, type:string),\n#how-it-works .section-header .section-subtitle :field(name:howItWorksSubtitle, type:text),\n.steps :field(name:steps, type:array, options(layout:list)),\n#reviews .section-header .eyebrow :field(name:reviewsEyebrow, type:string),\n#reviews .section-header .section-title :field(name:reviewsTitle, type:string),\n#reviews .section-header .section-subtitle :field(name:reviewsSubtitle, type:text),\n.testimonials-grid :field(name:testimonials, type:array, options(layout:list)),\n#faq .section-header .eyebrow :field(name:faqEyebrow, type:string),\n#faq .section-header .section-title :field(name:faqTitle, type:string),\n.faq-list :field(name:faqs, type:array, options(layout:list)),\n#cta .cta-title :field(name:ctaTitle, type:string),\n#cta .cta-subtitle :field(name:ctaSubtitle, type:text),\n#cta .cta-buttons :field(name:ctaButtons, type:array, options(layout:list)),\n.footer-brand p :field(name:footerDescription, type:text)"
+    }
+  ],
+  "vocabularies": {}
+}
